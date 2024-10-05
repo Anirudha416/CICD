@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="URL" value="qaclickacademy.com"/>
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="TestNg.Listeners"/>
+    <listener class-name="standalone.Testcomponent.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" parallel="tests" name="Errorvalidation(failed)">
     <classes>
-      <class name="TestNg.day_1">
+      <class name="standalone.ErrorValidation">
         <methods>
-          <include name="demo"/>
+          <include name="LoginErrorValidation"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestNg.day_1 -->
+      </class> <!-- standalone.ErrorValidation -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Errorvalidation(failed) -->
 </suite> <!-- Failed suite [Suite] -->

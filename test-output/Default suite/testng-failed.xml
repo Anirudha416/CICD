@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNg.MtTest">
+      <class name="standalone.ErrorValidation">
         <methods>
-          <include name="test2"/>
-          <include name="test3"/>
+          <include name="submitOrder"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestNg.MtTest -->
+      </class> <!-- standalone.ErrorValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
